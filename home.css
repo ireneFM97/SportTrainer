@@ -1,0 +1,227 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-rows: 1fr 1fr 100px;
+    grid-template-areas:
+        "sidebar header header"
+        "main main main"
+        "footer footer footer";
+}
+
+
+.container header {
+    background: beige;
+    grid-area: header;
+}
+
+.container aside {
+    background: yellow;
+    grid-area: sidebar;
+}
+
+.container main {
+    background: rgb(127, 127, 255);
+    grid-area: main;
+}
+
+.container footer {
+    background: rgb(39, 209, 39);
+    grid-area: footer;
+}
+
+@media (width > 500px) {
+    .container {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 100px;
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+
+    /*------------------------HEADER---------------------------------------*/
+
+    .container header {
+        background: url(assets/pista.jpg);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas:
+            "arriba"
+            "abajo";
+    }
+
+    .header-arriba {
+        grid-area: arriba;
+        display: flex;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.488);
+        align-items: center;
+        padding: 0 80px;
+    }
+
+    .logo img {
+        margin-top: 5px;
+        width: 60px;
+        height: 50px;
+    }
+
+    .barra {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        font-weight: 800;
+        text-decoration: none;
+        color: black;
+        position: relative;
+    }
+
+    .nav-link::before,
+    .nav-link::after {
+        content: "";
+        border-bottom: 2px solid black;
+        position: absolute;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    .nav-link::before {
+        width: 90%;
+        bottom: -5px;
+        right: 0;
+    }
+
+    .nav-link::after {
+        bottom: -10px;
+        left: 0;
+        width: 60%;
+    }
+
+    .nav-link.activo::before,
+    .nav-link:hover::before {
+        opacity: 1;
+        width: 70%;
+        bottom: -5px;
+        right: 0;
+    }
+
+    .nav-link.activo::after,
+    .nav-link:hover::after {
+        opacity: 1;
+        bottom: -10px;
+        left: 0;
+        width: 40%;
+    }
+
+
+    .header-abajo {
+        grid-area: abajo;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    .header-abajo p {
+        margin: 0;
+    }
+
+    .header-abajo p:first-child {
+        margin-bottom: 15px;
+    }
+
+
+    .box-letras {
+        flex-wrap: wrap;
+        width: 400px;
+        height: 70px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-left: 170px;
+    }
+
+    /*------------------------FIN HEADER---------------------------------------*/
+
+    .container aside {
+        background: yellow;
+        display: none;
+    }
+
+    /*------------------------MAIN CONTENIDO---------------------------------------*/
+
+    .container main {
+        background: rgba(240, 245, 246, 255);
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        gap: 122px;
+    }
+
+    .descripcion {
+        width: 400px;
+        height: 430px;
+        border-radius: 8px;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-content: first flex-start;
+        background: white;
+        box-shadow: 5px 5px 50px rgb(0, 0, 0, 0.5);
+        border-color: none;
+
+    }
+
+    .container main p {
+        margin: 0 45px;
+        text-align: justify;
+    }
+
+    .container main h3 {
+        margin-top: 50px;
+    }
+
+    /*------------------------MAIN FIN CONTENIDO---------------------------------------*/
+
+
+
+
+
+
+
+
+
+    .container footer {
+        background: rgb(39, 209, 39);
+        grid-area: footer;
+    }
+}
