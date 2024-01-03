@@ -51,7 +51,7 @@ body {
         display: grid;
         min-height: 100vh;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 2fr 100px;
+        grid-template-rows: 250px 750px 100px;
         grid-template-areas:
             "header header header"
             "main main main"
@@ -182,23 +182,47 @@ body {
         grid-area: main;
         display: flex;
         justify-content: center;
-        gap: 122px;
+        align-items: center;
+        gap: 200px;
+    }
+
+    .tarjeta1, .tarjeta2 {
+        position: relative;
+        width: 500px;
+        height: 430px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
     }
 
     .descripcion {
-        width: 400px;
-        height: 430px;
+        height: 500px;
         border-radius: 8px;
         flex-wrap: wrap;
         text-align: center;
-        margin: 50px 0;
         display: flex;
         justify-content: center;
-        align-content: first flex-start;
+        align-content: flex-start;
         background: white;
         box-shadow: 5px 5px 50px rgb(0, 0, 0, 0.5);
         border-color: none;
+        position: relative;
+        z-index: 1;
+    }
 
+    .foto-encima {
+        width: 350px;
+        height: 230px;
+        border-radius: 8px;
+        position: absolute;
+        transform: translateX(+90%);
+        transform: translateY(-40%);
+        z-index: 2;
+    }
+
+    .container main p, h3 {
+        margin-top: 170px;
     }
 
     .container main p {
@@ -206,22 +230,43 @@ body {
         text-align: justify;
     }
 
-    .container main h3 {
-        margin-top: 50px;
-    }
 
     /*------------------------MAIN FIN CONTENIDO---------------------------------------*/
 
-
-
-
-
-
-
-
+    /*------------------------FOOTER---------------------------------------------------*/
 
     .container footer {
-        background: rgb(39, 209, 39);
+        background: #C88B82;
         grid-area: footer;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .logo-izquierda img {
+        height: 80px;
+        width: 170px;
+    }
+
+    .politicas {
+        display: flex;
+        gap: 100px
+    }
+
+    .politicas a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+    }
+
+    .rrss a {
+        text-decoration: none;
+    }
+
+    .rrss img {
+        height: 30px;
+        width: 30px;
+        margin-left: 15px;
     }
 }
