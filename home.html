@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
@@ -18,18 +19,57 @@
         <!-----------------------HEADER------------------------------------------------------------------------->
         <header>
             <!--------------------HEADER NAVEGACIÓN------------------------------------->
-            <div class="header-arriba">
+            <nav>
                 <div class="logo">
                     <img src="assets/logo.PNG" alt="logotipo">
                 </div>
-                <nav class="barra">
+                <div class="barra">
                     <a href="#" class="nav-link activo">Inicio</a>
                     <a href="./nosotros.html" class="nav-link">Nosotros</a>
                     <a href="#" class="nav-link">Servicios</a>
                     <a href="#" class="nav-link">Contacto</a>
-                </nav>
-                <!--------------------FIN HEADER NAVEGACIÓN------------------------------------->
-            </div>
+                </div>
+                <div class="container-usuario">
+                    <div class="container-bienvenida">
+                        <p class="nombre-usuario">Hi </p>
+                        <p class="nombre-usuario">
+                            <?php
+                                echo $_SESSION['name'] . "!"; //para saber el nombre de usuario que está en esa sesión
+                            ?>
+                        </p>
+                    </div>
+                    <span class="material-symbols-outlined icon-user" id="icono-opciones">account_circle</span>
+                    <div class="container-opciones">
+                        <div class="usuario-opciones">
+                            <img class="img-usuario" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="imagen de perfil del usuario">
+                            <div>
+                                <h5>
+                                    <?php
+                                        echo $_SESSION['name'] . " " . $_SESSION['surnames'];
+                                    ?>
+                                </h5>
+                                <p>
+                                    <?php
+                                        echo $_SESSION["userEmail"];
+                                    ?>
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div class="container-lista">
+                            <span class="material-symbols-outlined">person</span>
+                            <a href="#" data-section="options" data-value="option1">Perfil</a>
+                        </div>
+                        <div class="container-lista">
+                            <span class="material-symbols-outlined">settings</span>
+                            <a href="#" data-section="options" data-value="option2">Configuración</a>
+                        </div>
+                        
+                        <a class="cerrar-sesion" href="php/close_session.php" data-section="options" data-value="option3">Cerrar sesión</a>
+                    </div>
+                </div>
+            </nav>
+            <!--------------------FIN HEADER NAVEGACIÓN------------------------------------->
             <!--------------------HEADER ABAJO------------------------------------->
             <div class="header-abajo">
                 <div class="box-letras">
@@ -103,4 +143,5 @@
     </section>
 </body>
 
+<script src="home.js"></script>
 </html>

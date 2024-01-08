@@ -75,13 +75,15 @@ body {
             "abajo";
     }
 
-    .header-arriba {
+    nav {
         grid-area: arriba;
         display: flex;
         justify-content: space-between;
-        background: rgba(255, 255, 255, 0.488);
+        background: rgba(255, 255, 255, 0.657);
         align-items: center;
         padding: 0 80px;
+        position: fixed;
+        width: 100%;
     }
 
     .logo img {
@@ -92,7 +94,7 @@ body {
 
     .barra {
         display: flex;
-        gap: 30px;
+        gap: 50px;
     }
 
     .nav-link {
@@ -140,6 +142,110 @@ body {
         width: 40%;
     }
 
+    .container-usuario{
+        position: relative;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        margin-right: 30px;
+    }
+    
+    .container-bienvenida{
+        display: flex;
+        width: auto;
+        gap: 5px;
+    }
+    
+    .container-usuario span{
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: 2px;
+    }
+    
+    .container-opciones{
+        display: none;
+    }
+    
+    .container-opciones.shown{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #385dad;
+        height: auto;
+        width: auto;
+        top: 42px;
+        right: 23px;
+        border-radius: 8px;
+        color: white;
+        transform: translateY(0px);
+        transition: all 0.5s ease-in;
+    }
+    
+    .container-opciones.shown:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .usuario-opciones{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .usuario-opciones div{
+        width: 250px;
+        padding: 10px;
+    }
+    
+    .usuario-opciones div p{
+        font-size: 13px;
+    }
+    
+    .img-usuario{
+        width: 60px;
+        height: 60px;
+        margin: 10px 15px 20px 15px;
+    }
+    
+    .container-lista{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 0px 10px 10px 10px;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .container-lista span{
+        font-size: 25px;
+    }
+    
+    .container-lista a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    
+    .container-lista:hover{
+        transform: translateX(10px);
+    }
+    
+    .cerrar-sesion{
+        border-top: 0.5px solid rgb(150, 150, 150);
+        width: 90%;
+        margin: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 10px 0px;
+        
+    }
+    
+    .cerrar-sesion:hover{
+        background-color: rgba(100, 100, 100, 0.734);
+        border-radius: 5px;
+    }
 
     .header-abajo {
         grid-area: abajo;
@@ -165,7 +271,7 @@ body {
         display: flex;
         align-content: center;
         justify-content: center;
-        margin-left: 170px;
+        margin-left: 270px;
     }
 
     /*------------------------FIN HEADER---------------------------------------*/
@@ -194,6 +300,14 @@ body {
         display: flex;
         justify-content: center;
         flex-direction: row;
+        transform: translateY(0px);
+        transition: all 0.3s ease-in;
+        cursor: pointer;
+    }
+
+    .tarjeta1:hover, .tarjeta2:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
     }
 
     .descripcion {
@@ -208,7 +322,7 @@ body {
         box-shadow: 5px 5px 50px rgb(0, 0, 0, 0.5);
         border-color: none;
         position: relative;
-        z-index: 1;
+        z-index: 0;
     }
 
     .foto-encima {
@@ -218,7 +332,7 @@ body {
         position: absolute;
         transform: translateX(+90%);
         transform: translateY(-40%);
-        z-index: 2;
+        z-index: 1;
     }
 
     .container main p, h3 {
