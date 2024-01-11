@@ -690,7 +690,7 @@ body {
     /*------------------------FOOTER---------------------------------------------------*/
 
     .container footer {
-        background: #C88B82;
+        background: rgb(178, 175, 175);
         grid-area: footer;
         display: flex;
         justify-content: space-evenly;
@@ -700,7 +700,7 @@ body {
 
     .logo-izquierda img {
         height: 80px;
-        width: 170px;
+        width: 100px;
     }
 
     .politicas {
