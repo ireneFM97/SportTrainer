@@ -342,13 +342,17 @@ nav {
 
 /*------------------------FOOTER---------------------------------------------------*/
 
-.container footer {
+.container footer, .seccion-footer {
     background: rgb(178, 175, 175);
     grid-area: footer;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 100px;
+}
+
+.seccion-footer {
+    width: 100vw;
 }
 
 .logo-izquierda img {
@@ -375,6 +379,115 @@ nav {
     height: 30px;
     width: 30px;
     margin-left: 15px;
+}
+
+/*********FIN Inicio*************************/
+/*********Nosotros**************************/
+
+.n-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 1650px 100px;
+    grid-template-areas:
+        "n-header n-header n-header"
+        "n-main n-main n-main"
+        "n-footer n-footer n-footer";
+}
+
+.n-header{
+    background: url(assets/pista.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    grid-area: n-header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+        "arriba"
+        "abajo";
+}
+
+.n-main {
+    background: rgba(240, 245, 246, 255);
+    grid-area: n-main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    grid-area: n-main;
+}
+
+.n-seccion-tarjetas {
+    width: 900px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.n-tarjeta-izq{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px;
+    background: white;
+    box-shadow: 5px 5px 50px rgb(0, 0, 0, 0.5);
+    border-color: none;
+    border-radius: 10px;
+}
+
+.foto {
+    width: 300px;
+    height: 400px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.foto2 {
+    width: 300px;
+    height: 400px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: -1px;
+    margin-top: -1px;
+}
+
+.n-seccion-tarjetas p {
+    font-size: 17px;
+}
+
+.n-texto h2{
+    text-align: center;
+}
+
+.n-tarjeta-der {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-left: 40px;
+    background: white;
+    box-shadow: 5px 5px 50px rgb(0, 0, 0, 0.5);
+    border-color: none;
+    border-radius: 10px;
+}
+
+/*********************FOOTER NOSOTROS***************************/
+
+.n-footer {
+    background: rgb(178, 175, 175);
+    grid-area: n-footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /**********************************************************/
@@ -406,13 +519,68 @@ nav {
         font-size: 14px;
     }
 
-    .container footer {
-        gap: 0px;
+    .container footer, .seccion-footer {
+        gap: 9px;
     }
 
     .politicas {
         gap: 50px
     }
+}
+
+@media screen and (max-width: 1000px) { 
+    
+    .n-seccion-tarjetas {
+        width: 850px;
+        height: 300px;
+        gap: 75px;
+    }
+    
+    .foto {
+        width: 300px;
+        height: 420px;
+    }
+    
+    .foto2 {
+        width: 300px;
+        height: 420px;
+    }
+}
+
+@media screen and (max-width: 950px) { 
+
+    .n-container {
+        grid-template-rows: 250px 1790px 100px;
+    }
+
+    .n-main {
+        gap: 17px
+    }
+
+    .n-seccion-tarjetas {
+        width: 700px;
+        height: 300px;
+        gap: 71px;
+    }
+    
+    .foto {
+        width: 310px;
+        height: 460px;
+    }
+    
+    .foto2 {
+        width: 380px;
+        height: 500px;
+    }
+    
+    .n-seccion-tarjetas p {
+        font-size: 15px;
+    }
+    
+    .n-texto h2{
+        font-size: 23px;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -449,7 +617,56 @@ nav {
         gap: 20px;
     }
 
+}
 
+@media screen and (max-width: 800px) { 
+
+    .n-container {
+        grid-template-rows: 250px 2500px 100px;
+    }
+
+    .n-seccion-tarjetas {
+        width: 500px;
+        height: 300px;
+        flex-direction: column;
+        gap: 67px;
+    }
+    
+    .n-tarjeta-izq{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px 0px 0px 0px;
+    }
+    
+    .foto {
+        width: 220px;
+        height: 310px;
+        border-radius: 10px;
+    }
+    
+    .foto2 {
+        width: 220px;
+        height: 310px;
+        border-radius: 10px;
+    }
+    
+    .n-seccion-tarjetas p {
+        font-size: 15px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+    
+    .n-texto h2{
+        font-size: 20px;
+    }
+    
+    .n-tarjeta-der {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px 0px 0px 0px;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -505,6 +722,10 @@ nav {
         grid-template-rows: 250px 1450px 150px;
     }
 
+    .n-container {
+        grid-template-rows: 250px 2500px 150px;
+    }
+
     .politicas {
         flex-direction: column;
         align-items: center;
@@ -540,13 +761,50 @@ nav {
     .seccion-tarjetas p {
         font-size: 15px;
     }
+
+    .n-container {
+        grid-template-rows: 250px 2450px 150px;
+    }
+
+    .n-seccion-tarjetas {
+        width: 410px;
+        height: 300px;
+    }
+    
+    .n-seccion-tarjetas p {
+        font-size: 14px;
+    }
+    
+    .n-texto h2{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 570px) { 
+    .n-container {
+        grid-template-rows: 250px 2410px 170px;
+    }
+
+    .n-main {
+        gap: 33px;
+    }
+
+    .n-seccion-tarjetas {
+        width: 320px;
+    }
+
+    .foto {
+        width: 160px;
+        height: 210px;
+    }
+    
+    .foto2 {
+        width: 160px;
+        height: 210px;
+    }
 }
 
 @media screen and (max-width: 500px) {
-
-    .titulo-eslogan {
-        padding-top: 50px;
-    }
 
     .tarjeta1,
     .tarjeta2 {
@@ -574,106 +832,3 @@ nav {
     }
 }
 
-/*********FIN Inicio*************************/
-/*********Nosotros**************************/
-
-.n-container {
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 250px 1650px 100px;
-    grid-template-areas:
-        "n-header n-header n-header"
-        "n-main n-main n-main"
-        "n-footer n-footer n-footer";
-}
-
-.n-container .n-header{
-    background: url(assets/pista.jpg);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    grid-area: n-header;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 70px 1fr;
-    grid-template-areas:
-        "arriba"
-        "abajo";
-}
-
-.n-container .n-main {
-    background: rgba(240, 245, 246, 255);
-    grid-area: n-main;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    grid-area: n-main;
-}
-
-.n-seccion-tarjetas {
-    width: 900px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-.n-tarjeta-izq{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding-right: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.foto {
-    width: 300px;
-    height: 400px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-left: -1px;
-    margin-top: -1px;
-}
-
-.foto2 {
-    width: 300px;
-    height: 400px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-right: -1px;
-    margin-top: -1px;
-}
-
-.n-seccion-tarjetas p {
-    font-size: 17px;
-}
-
-.n-texto h2{
-    text-align: center;
-}
-
-.n-container .n-footer {
-    background: rgb(178, 175, 175);
-    grid-area: n-footer;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 100px;
-}
-
-.n-tarjeta-der {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding-left: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
