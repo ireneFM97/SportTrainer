@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Sport Trainer</title>
+    <title>Contacto | Sport Trainer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="icon" href="assets/logo.png" type="image/x-icon">
@@ -16,9 +16,9 @@
 </head>
 
 <body>
-    <section class="container">
+    <section class="c-container">
         <!-----------------------HEADER------------------------------------------------------------------------->
-        <header>
+        <header class="c-header">
             <!--------------------HEADER NAVEGACIÓN------------------------------------->
             <nav>
                 <span class="material-symbols-outlined menu">menu</span>
@@ -26,10 +26,10 @@
                     <img src="assets/logo.PNG" alt="logotipo">
                 </div>
                 <div class="barra">
-                    <a href="./home.html" class="nav-link activo">Inicio</a>
+                    <a href="./home.html" class="nav-link">Inicio</a>
                     <a href="./nosotros.html" class="nav-link">Nosotros</a>
                     <a href="./servicios.html" class="nav-link">Servicios</a>
-                    <a href="./contacto.html" class="nav-link">Contacto</a>
+                    <a href="./contacto.html" class="nav-link activo">Contacto</a>
                 </div>
                 <div class="container-usuario">
                     <div class="container-bienvenida">
@@ -80,79 +80,54 @@
         </header>
         <!-----------------------FIN  HEADER------------------------------------------------------------------------->
         <!---------------------------INICIO CONTENIDO------------------------------------------->
-        <main>
+        <main class="c-main">
             <section class="seccion-eslogan">
                 <div class="box-letras">
-                    <p class="titulo-eslogan">Descubre la libertad en cada zancada y desafía tus límites</p>
-                    <p class="preparado">¿Estás preparado?</p>
+                    <p class="texto-contacto">¿Donde estamos?</p>
                 </div>
             </section>
-            <section class="seccion-tarjetas">
-                <div class="tarjeta1">
-                    <img class="foto-encima" src="assets/corredores.jpg" alt="corredores-retiro">
-                    <div class="descripcion">
+                <div class="datos-formulario">
+                    <div class="datos-mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.4200338386045!2d-3.6979478235714023!3d40.44383945398825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228fa7e411c07%3A0xd1d76841c0c4ee99!2sC%2F%20de%20Agust%C3%ADn%20de%20Betancourt%2C%2013%2C%20Chamber%C3%AD%2C%2028003%20Madrid!5e0!3m2!1sen!2ses!4v1705243637088!5m2!1sen!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p>DATOS DE CONTACTO</p>
+                        <div>
+                            <span class="material-symbols-outlined icono-contacto-main">location_on</span>
+                            <p>C/ de Agustín de Betancourt, 13 28003 Madrid</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-outlined icono-contacto-main">call</span>
+                            <a href="tel:+1234567890">915 392 111</a>
+                        </div>
+                        <div>
+                            <span class="material-symbols-outlined icono-contacto-main">mail</span>
+                            <a href="mailto:correo@example.com">info@sportrainer.com</a>
+                        </div>
+                    </div>
 
-                        <h3 class="titulo-tarjeta">Grupo de corredores del retiro</h3>
-                        <p class="texto-tarjeta">Únete a nuestro animado grupo de corredores del retiro, donde 15
-                            entusiastas comparten la pasión
-                            por
-                            correr y disfrutar de la vida después del retiro. <br><br>
-
-                            Realizamos 2 quedadas cada semana, creando vínculos y promoviendo la salud a través de
-                            carreras
-                            emocionantes y rutas pintorescas. <br><br>
-
-                            Todos son bienvenidos, desde principiantes hasta corredores experimentados. Celebramos
-                            logros
-                            individuales y colectivos con eventos especiales, construyendo una comunidad unida en torno
-                            a
-                            nuestra pasión compartida.</p>
+                    <div class="container-formulario">
+                        <p class="titulo">¿Tienes alguna duda?</p>
+                        <form class="fomulario">
+                            <div class="grupo-input">
+                                <label for="telefono">Número de teléfono</label>
+                                <input type="text" name="telefono" id="telefono" placeholder="">
+                            </div>
+                            <div class="grupo-input">
+                                <textarea name="consulta" id="consulta" class="input-textarea" cols="30" rows="5" placeholder="Escribe tu consulta aquí"></textarea>
+                            </div>
+                            <button class="boton">
+                                <span class="contenido-boton">Envíar </span>
+                              </button>
+                        </form>
                     </div>
                 </div>
-                <div class="tarjeta2">
-                    <img class="foto-encima" src="assets/corredoresSanSilvestre.jpg" alt="corredores-retiro">
-                    <div class="descripcion">
 
-                        <h3 class="titulo-tarjeta">Grupo de corredores Arturo Soria</h3>
-                        <p class="texto-tarjeta">Cada año, nuestros apasionados corredores del Club de Corredores de
-                            Arturo Soria anticipan con
-                            entusiasmo la emblemática Carrera de la San Silvestre. Más de 400 miembros fuertes,
-                            impregnados
-                            del espíritu festivo, se lanzan a las calles, cerrando el año con salud y determinación.
-                            <br><br>
-
-                            ¡Te esperamos con los brazos abiertos en la línea de partida! Únete a la tradición, únete a
-                            la
-                            diversión, únete a la familia de corredores de Arturo Soria. ¡Nos vemos en la carrera!
-                        </p>
-                    </div>
-                </div>
-            </section>
         </main>
         <!----------------------------------------------------FIN DEL CONTENIDO------------------------------------------------>
         <!------------------------------------------------INICIO DEL FOOTER----------------------------------------------------->
-        <footer>
-            <section class="seccion-footer">
-                <div class="logo-izquierda">
-                    <img src="assets/logo.png" alt="logotipo">
-                </div>
-                <div class="politicas">
-                    <a href="#">Política de Privacidad</a>
-                    <a href="#">Condiciones de uso</a>
-                    <a href="#">Cookies</a>
-                </div>
-                <div class="rrss">
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="assets/facebook.png" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/instagram.png" alt="Instagram">
-                    </a>
-                    <a href="https://twitter.com/" target="_blank">
-                        <img src="assets/x.png" alt="X">
-                    </a>
-                </div>
-            </section>
+        <footer class="c-footer">
+            <p class="frase-footer">"No pienso en los límites, <span>no hay nada imposible"</span>
+            </p>
+            <p class="autor"><span>USAIN </span>BOLT</p>
         </footer>
     </section>
 </body>

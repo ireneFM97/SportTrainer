@@ -1,3 +1,5 @@
+/*#9ecbff*/
+
 html {
     box-sizing: border-box;
 }
@@ -417,7 +419,6 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    grid-area: n-main;
 }
 
 .n-seccion-tarjetas {
@@ -490,6 +491,230 @@ nav {
     align-items: center;
 }
 
+/***********************FIN Nosotros**************************/
+/*****************Contacto***********************************/
+.c-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 700px 200px;
+    grid-template-areas:
+        "c-header c-header c-header"
+        "c-main c-main c-main"
+        "c-footer c-footer c-footer";
+}
+
+.c-header{ 
+    background: url(assets/pista.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    grid-area: c-header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+        "arriba"
+        "abajo";
+}
+
+.c-main {
+    background: rgba(240, 245, 246, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    grid-area: c-main;
+}
+
+.texto-contacto{
+    font-weight: 900;
+    font-size: 40px;
+    color:#5ba5fa;
+}
+
+.datos-formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+.container-formulario {
+    width: 320px;
+    border-radius: 0.75rem;
+    background-color: #5ba5fa;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+  
+  .formulario {
+    margin-top: 1.5rem;
+  }
+  
+  .grupo-input {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .grupo-input label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .grupo-input input, .input-textarea {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    outline: 0;
+    background-color: #c0e0ff;
+    padding: 0.75rem 1rem;
+  }
+
+  .boton {
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+    width: 100%;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .boton:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .contenido-boton {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .boton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      #e3f709,
+      #50a8ff 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+.datos-mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.datos-mapa p {
+    margin: 0;
+}
+
+.datos-mapa div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.datos-mapa div a{
+    text-decoration: none;
+    color: black;
+}
+
+.icono-contacto-main {
+    color: #5ba5fa;
+
+}
+
+.c-footer {
+    background: rgb(86, 86, 86);
+    grid-area: c-footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.frase-footer {
+    font-size: 45px;
+    margin: 5px;
+    text-align: center;
+}
+
+.c-footer span {
+    color: #5ba5fa;
+}
+
+.autor {
+    font-size: 25px;
+}
+/***************FIN contacto*******************************/
+/*****************Servicios********************************/
+.s-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 1650px 100px;
+    grid-template-areas:
+        "s-header s-header s-header"
+        "s-main s-main s-main"
+        "s-footer s-footer s-footer";
+}
+
+.s-header{
+    grid-area: s-header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px;
+    grid-template-areas:
+        "arriba"
+}
+
+.s-main {
+    background: rgba(240, 245, 246, 255);
+    grid-area: s-main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.s-footer {
+    background: rgb(178, 175, 175);
+    grid-area: s-footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
 /**********************************************************/
 
 @media screen and (max-width: 1300px) {
@@ -501,6 +726,10 @@ nav {
 @media screen and (max-width: 1200px) {
     .seccion-tarjetas {
         gap: 50px
+    }
+
+    .frase-footer {
+        font-size: 40px;
     }
 }
 
@@ -526,6 +755,7 @@ nav {
     .politicas {
         gap: 50px
     }
+
 }
 
 @media screen and (max-width: 1000px) { 
@@ -545,6 +775,7 @@ nav {
         width: 300px;
         height: 420px;
     }
+    
 }
 
 @media screen and (max-width: 950px) { 
@@ -579,6 +810,10 @@ nav {
     
     .n-texto h2{
         font-size: 23px;
+    }
+
+    .datos-formulario {
+        gap: 58px;
     }
 
 }
@@ -617,6 +852,30 @@ nav {
         gap: 20px;
     }
 
+}
+
+@media screen and (max-width: 850px) { 
+    
+    .c-container{
+        grid-template-rows: 250px 1200px 200px
+    }
+
+    .datos-formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .datos-mapa iframe {
+        width: 700px;
+        height: 400px;
+    }
+    
+    .frase-footer {
+        font-size: 32px;
+    }
 }
 
 @media screen and (max-width: 800px) { 
@@ -667,6 +926,11 @@ nav {
         gap: 10px;
         padding: 30px 0px 0px 0px;
     }
+
+    .datos-mapa iframe {
+        width: 570px;
+        height: 350px;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -713,6 +977,10 @@ nav {
 
     .rrss img {
         margin-left: 10px;
+    }
+
+    .datos-mapa iframe {
+        width: 500px;
     }
 }
 
@@ -802,6 +1070,10 @@ nav {
         width: 160px;
         height: 210px;
     }
+
+    .datos-mapa iframe {
+        width: 370px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -829,6 +1101,10 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .frase-footer {
+        font-size: 30px;
     }
 }
 
