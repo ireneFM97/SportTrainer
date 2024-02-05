@@ -30,7 +30,7 @@ body {
 /*------------------------HEADER---------------------------------------*/
 
 .container header {
-    background: url(assets/pista.jpg);
+    background: url(../assets/pista.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -398,7 +398,7 @@ nav {
 }
 
 .n-header{
-    background: url(assets/pista.jpg);
+    background: url(../assets/pista.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -505,7 +505,7 @@ nav {
 }
 
 .c-header{ 
-    background: url(assets/pista.jpg);
+    background: url(../assets/pista.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -686,7 +686,7 @@ nav {
         "s-header s-header s-header"
         "s-main s-main s-main"
         "s-footer s-footer s-footer";
-    background: url(assets/fondo-servicios.jpg);
+    background: url(../assets/fondo-servicios.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;

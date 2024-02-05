@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(assets/foto-bg.jpg);
+    background-image: url(../assets/foto-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,7 +39,7 @@ body {
 }
 
 .recuadro-login.active{
-    height: 520px;
+    height: 650px;
 }
 
 .formulario-box-login {
