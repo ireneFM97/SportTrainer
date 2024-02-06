@@ -81,7 +81,7 @@ nav {
 .nav-link::before,
 .nav-link::after {
     content: "";
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
     position: absolute;
     opacity: 0;
     transition: 0.2s;
@@ -329,13 +329,13 @@ nav {
     z-index: 1;
 }
 
-.texto-tarjeta,
+
 .titulo-tarjeta {
     margin-top: 170px;
 }
 
 .texto-tarjeta {
-    margin: 0 45px;
+    margin: 0 45px 25px 45px;
     text-align: justify;
 }
 
@@ -681,7 +681,7 @@ nav {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 58px 1650px 100px;
+    grid-template-rows: 58px 2000px 100px;
     grid-template-areas:
         "s-header s-header s-header"
         "s-main s-main s-main"
@@ -842,6 +842,23 @@ nav {
         width: 300px;
         height: 420px;
     }
+
+    .s-container {
+        grid-template-rows: 58px 2900px 100px;
+    }
+
+    .s-main section {
+        width: 675px;
+        height: 898px;
+    }
+
+    .s-tarjeta-inferior{
+        flex-wrap: wrap;
+    }
+
+    .izq{
+        margin-right: 60px;
+    }
     
 }
 
@@ -998,6 +1015,19 @@ nav {
         width: 570px;
         height: 350px;
     }
+
+    .s-container {
+        grid-template-rows: 58px 3000px 100px;
+    }
+
+    .s-main section {
+        width: 626px;
+        height: 933px;
+    }
+
+    .s-tarjeta-inferior{
+        padding-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -1048,6 +1078,20 @@ nav {
 
     .datos-mapa iframe {
         width: 500px;
+    }
+
+    .s-container {
+        grid-template-rows: 58px 5200px 100px;
+    }
+
+    .s-main section{
+        width: 473px;
+        height: 1659px;
+        padding-top: 40px;
+    }
+
+    .s-tarjeta-superior {
+        flex-direction: column;
     }
 }
 
@@ -1141,6 +1185,25 @@ nav {
     .datos-mapa iframe {
         width: 370px;
     }
+
+    .s-container {
+        grid-template-rows: 58px 5550px 100px;
+    }
+
+    .s-main section{
+        width: 374px;
+        height: 1773px;
+    }
+
+    .s-descripcion-tarjeta h2 {
+        font-size: 1.3em;
+    }
+
+    .s-linea p {
+        font-size: 12px;
+    }
+
+
 }
 
 @media screen and (max-width: 500px) {
