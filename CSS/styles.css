@@ -965,7 +965,7 @@ nav {
 @media screen and (max-width: 800px) { 
 
     .n-container {
-        grid-template-rows: 250px 2500px 100px;
+        grid-template-rows: 250px 2610px 100px;
     }
 
     .n-seccion-tarjetas {
@@ -1102,7 +1102,11 @@ nav {
     }
 
     .n-container {
-        grid-template-rows: 250px 2500px 150px;
+        grid-template-rows: 250px 2650px 150px;
+    }
+
+    .s-container {
+        grid-template-rows: 58px 5200px 150px;
     }
 
     .politicas {
@@ -1142,7 +1146,7 @@ nav {
     }
 
     .n-container {
-        grid-template-rows: 250px 2450px 150px;
+        grid-template-rows: 250px 2600px 150px;
     }
 
     .n-seccion-tarjetas {
@@ -1161,7 +1165,7 @@ nav {
 
 @media screen and (max-width: 570px) { 
     .n-container {
-        grid-template-rows: 250px 2410px 170px;
+        grid-template-rows: 250px 2570px 170px;
     }
 
     .n-main {
@@ -1187,7 +1191,7 @@ nav {
     }
 
     .s-container {
-        grid-template-rows: 58px 5550px 100px;
+        grid-template-rows: 58px 5550px 170px;
     }
 
     .s-main section{
@@ -1235,6 +1239,10 @@ nav {
 
     .frase-footer {
         font-size: 30px;
+    }
+
+    .titulo-eslogan {
+        padding-top: 64px;
     }
 }
 
