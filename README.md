@@ -11,5 +11,13 @@ NOSOTROS
 
 ![image](https://github.com/ireneFM97/SportTrainer/assets/121550787/257737b2-0885-4c49-8a41-b2fcb738804a)
 
+SERVICIOS
+
+![image](https://github.com/ireneFM97/SportTrainer/assets/121550787/3fded938-7dad-4fcb-825d-ab995034534d)
+
+CONTACTO
+
+![image](https://github.com/ireneFM97/SportTrainer/assets/121550787/3962781a-6a62-43fc-8e65-c2692fcb422c)
+![image](https://github.com/ireneFM97/SportTrainer/assets/121550787/68be5e2a-4b91-4e2f-bc10-98717cf3202b)
 
 
