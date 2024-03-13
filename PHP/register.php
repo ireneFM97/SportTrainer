@@ -15,14 +15,16 @@
     if ($nombre == "" || $apellidos == "" || $usuario == "" || $correo == "" || $contrasenia == "") {
         header('Location: ../HTML/loginRegistro.html');
     } else if ($correo == $emailDB) {
-            echo "Este correo ya existe <br>";
+            $response = array('success' => false, 'message' => 'Ya estas registrado con este email. Inicia sesion');
+            echo json_encode($response);
     } else {
         $selectUsuario = "SELECT usuario FROM usuarios WHERE usuario = '$usuario'";
         $resultadoUsuario = $pdo->query($selectUsuario);
         $usuarioDB = $resultadoUsuario->fetchColumn();
 
         if ($usuario == $usuarioDB){
-            echo "Este usuario ya existe <br>";
+            $response = array('success' => false, 'message' => 'No esta disponible este nombre de usuario. Sigue intentando');
+            echo json_encode($response);
         } else {
             $insert = $pdo->prepare("INSERT INTO usuarios (nombre, apellidos, usuario, email, contrasenia) VALUES (?,?,?,?,?)");
     
@@ -35,9 +37,11 @@
             $insert->execute();
     
             if ($insert) {
-                echo "Usuario registrado correctamente <br>";
+                $response = array('success' => true, 'message' => '¡Te has registrado correctamente!. Inicia sesion');
+                echo json_encode($response);
             } else {
-                echo "Algo ha ido mal, registrate de nuevo";
+                $response = array('success' => false, 'message' => 'Registro fallido, intentelo de nuevo');
+                echo json_encode($response);
             }
         }
     }

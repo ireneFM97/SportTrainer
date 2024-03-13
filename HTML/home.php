@@ -1,3 +1,18 @@
+<?php 
+
+    session_start();
+    if ($_SESSION['emailUsuario'] != null) {
+        echo "
+        <script>
+            alert('Debes iniciar sesion');
+        </script>
+        ";
+        session_destroy();
+        die();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,13 +38,13 @@
             <nav>
                 <span class="material-symbols-outlined menu">menu</span>
                 <div class="logo">
-                    <a href="./home.html"><img src="../assets/logo.PNG" alt="logotipo"></a>
+                    <a href="./home.php"><img src="../assets/logo.PNG" alt="logotipo"></a>
                 </div>
                 <div class="barra">
-                    <a href="./home.html" class="nav-link activo">Inicio</a>
-                    <a href="./nosotros.html" class="nav-link">Nosotros</a>
-                    <a href="./servicios.html" class="nav-link">Servicios</a>
-                    <a href="./contacto.html" class="nav-link">Contacto</a>
+                    <a href="./home.php" class="nav-link activo">Inicio</a>
+                    <a href="./nosotros.php" class="nav-link">Nosotros</a>
+                    <a href="./servicios.php" class="nav-link">Servicios</a>
+                    <a href="./contacto.php" class="nav-link">Contacto</a>
                 </div>
                 <div class="container-usuario">
                     <div class="container-bienvenida">

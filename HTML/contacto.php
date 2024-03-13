@@ -1,3 +1,18 @@
+<?php 
+
+    session_start();
+    if ($_SESSION['emailUsuario'] != null) {
+        echo "
+        <script>
+            alert('Debes iniciar sesion');
+        </script>
+        ";
+        session_destroy();
+        die();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,13 +38,13 @@
             <nav>
                 <span class="material-symbols-outlined menu">menu</span>
                 <div class="logo">
-                    <a href="./home.html"><img src="../assets/logo.PNG" alt="logotipo"></a>
+                    <a href="./home.php"><img src="../assets/logo.PNG" alt="logotipo"></a>
                 </div>
                 <div class="barra">
-                    <a href="./home.html" class="nav-link">Inicio</a>
-                    <a href="./nosotros.html" class="nav-link">Nosotros</a>
-                    <a href="./servicios.html" class="nav-link">Servicios</a>
-                    <a href="./contacto.html" class="nav-link activo">Contacto</a>
+                    <a href="./home.php" class="nav-link">Inicio</a>
+                    <a href="./nosotros.php" class="nav-link">Nosotros</a>
+                    <a href="./servicios.php" class="nav-link">Servicios</a>
+                    <a href="./contacto.php" class="nav-link activo">Contacto</a>
                 </div>
                 <div class="container-usuario">
                     <div class="container-bienvenida">
@@ -106,10 +121,10 @@
 
                     <div class="container-formulario">
                         <p class="titulo">¿Tienes alguna duda?</p>
-                        <form class="fomulario" method="post" action="mail.php">
+                        <form class="fomulario" method="post" action="../assets/APIsms/sms.php">
                             <div class="grupo-input">
-                                <label for="telefono">Número de teléfono</label>
-                                <input type="text" name="telefono" id="telefono" placeholder="">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" name="email" id="email" placeholder="Ej: ejemplo@ejemplo.es">
                             </div>
                             <div class="grupo-input">
                                 <textarea name="consulta" id="consulta" class="input-textarea" cols="30" rows="5" placeholder="Escribe tu consulta aquí"></textarea>

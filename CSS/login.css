@@ -133,13 +133,7 @@ body {
     margin-top: 15px;
 }
 
-.terminos{
-    margin-bottom: 20px;
-}
 
-.terminos label{
-    padding-left: 3px;
-}
 
 .registro-link{
     text-decoration: none;
@@ -163,5 +157,16 @@ body {
     text-decoration: underline;
 }
 
+.error {
+    display: none;
+}
 
+.error.shown {
+    display: flex;
+    color: orange;
+    margin-top: 3px;
+}
 
+.error-servidor {
+    top: 530px
+}

@@ -13,7 +13,18 @@ include "conexion.php";
         $validarDB = $resultadoValidar->fetchColumn();
 
         if ($validarDB) {
-            header('Location: ../HTML/home.html');
+            $_SESSION['emailUsuario'] = $correo;
+
+            $selectNombre = "SELECT nombre FROM usuarios WHERE email = '$correo'";
+            $resultadoNombre = $pdo->query($selectNombre);
+            $nombreUsuario = $resultadoNombre->fetchColumn();
+            $_SESSION['nombreUsuario'] = $nombreUsuario;
+
+            $selectApellido = "SELECT apellidos FROM usuarios WHERE email = '$correo'";
+            $resultadoApellidos = $pdo->query($selectApellidos);
+            $apellidosUsuario = $resultadoApellidos->fetchColumn();
+            $_SESSION['apellidosUsuario'] = $apellidosUsuario;
+            
         } else {
             echo "Error";
         }

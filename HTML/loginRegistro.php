@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION['emailUsuario'])) {
+    header('Location: home.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,15 +35,17 @@
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" required name="correo">
                     <label>Email</label>
+                    <input type="email"  name="correo" autocomplete="off">
+
                 </div>
                 <div class="input-box">
                     <span class="material-symbols-outlined icon">
                         lock
                     </span>
-                    <input type="password" required name="contrasenia">
                     <label>Contraseña</label>
+                    <input type="password"  name="contrasenia" autocomplete="off">
+
                 </div>
                 <button type="submit" class="boton">Iniciar sesión</button>
                 <div class="pregunta-registro">
@@ -46,45 +58,50 @@
 
         <div class="formulario-box-registro">
             <h2>Registro</h2>
-            <form action="../PHP/register.php" method="post">
+            <form action="../PHP/register.php" method="post" id="formulario-registro">
                 <div class="input-box">
-                    <input type="text" required name="nombre">
                     <label>Nombre</label>
+                    <input type="text"  name="nombre" id="nombre" autocomplete="off">
+                    <p class="error" id="error-nombre">Este campo no puede estar vacío</p>
+
                 </div>
                 <div class="input-box">
-                    <input type="text" required name="apellidos">
                     <label>Apellidos</label>
+                    <input type="text"  name="apellidos" id="apellidos" autocomplete="off">
+                    <p class="error" id="error-apellidos">Este campo no puede estar vacío</p>
+
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="person"></ion-icon>
                     </span>
-                    <input type="text" required name="usuario">
                     <label>Usuario</label>
+                    <input type="text"  name="usuario" id="usuario" autocomplete="off">
+                    <p class="error" id="error-usuario">Este campo no puede estar vacío</p>
+
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" required name="correo">
                     <label>Email</label>
+                    <input type="email"  name="correo" id="correo" autocomplete="off">
+                    <p class="error" id="error-correo">Este campo no puede estar vacío</p>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed" class="lock-closed"></ion-icon>
                     </span>
-                    <input type="password" required name="contrasenia">
                     <label>Contraseña</label>
+                    <input type="password"  name="contrasenia" id="contrasenia" autocomplete="off">
+                    <p class="error" id="error-contrasenia">Este campo no puede estar vacío</p>
                 </div>
-                <div class="terminos">
-                    <input type="checkbox" name="terminos" id="terminos">
-                    <label>¿Estás de acuerdo con los terminos?</label>
-                </div>
-                <button type="submit" class="boton">Registrarse</button>
+                <button type="submit" class="boton" id="botonRegistro">Registrarse</button>
                 <div class="pregunta-registro">
                     <p>¿Ya tienes cuenta?<a href="#" class="login-link">Inicia sesión!</a></p>
                 </div>
             </form>
+            <div class="error-servidor" id="error-registro"></div>
         </div>
 
     </div>
