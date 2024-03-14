@@ -15,16 +15,16 @@
     if ($nombre == "" || $apellidos == "" || $usuario == "" || $correo == "" || $contrasenia == "") {
         header('Location: ../HTML/loginRegistro.html');
     } else if ($correo == $emailDB) {
-            $response = array('success' => false, 'message' => 'Ya estas registrado con este email. Inicia sesion');
-            echo json_encode($response);
+            $respuestaRegistro = array('success' => false, 'message' => 'Este email ya existe. Inicia sesion');
+            echo json_encode($respuestaRegistro);
     } else {
         $selectUsuario = "SELECT usuario FROM usuarios WHERE usuario = '$usuario'";
         $resultadoUsuario = $pdo->query($selectUsuario);
         $usuarioDB = $resultadoUsuario->fetchColumn();
 
         if ($usuario == $usuarioDB){
-            $response = array('success' => false, 'message' => 'No esta disponible este nombre de usuario. Sigue intentando');
-            echo json_encode($response);
+            $respuestaRegistro = array('success' => false, 'message' => 'Nombre de usuario no disponible. Sigue intentandolo');
+            echo json_encode($respuestaRegistro);
         } else {
             $insert = $pdo->prepare("INSERT INTO usuarios (nombre, apellidos, usuario, email, contrasenia) VALUES (?,?,?,?,?)");
     
@@ -37,11 +37,11 @@
             $insert->execute();
     
             if ($insert) {
-                $response = array('success' => true, 'message' => '¡Te has registrado correctamente!. Inicia sesion');
-                echo json_encode($response);
+                $respuestaRegistro = array('success' => true, 'message' => '¡Te has registrado correctamente!. Inicia sesion');
+                echo json_encode($respuestaRegistro);
             } else {
-                $response = array('success' => false, 'message' => 'Registro fallido, intentelo de nuevo');
-                echo json_encode($response);
+                $respuestaRegistro = array('success' => false, 'message' => 'Registro fallido, intentelo de nuevo');
+                echo json_encode($respuestaRegistro);
             }
         }
     }

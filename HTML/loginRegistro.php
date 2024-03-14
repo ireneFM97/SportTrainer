@@ -30,28 +30,29 @@ if (isset($_SESSION['emailUsuario'])) {
         <!-----------------------------------------INICIAR SESIÓN---------------------------------------------->
         <div class="formulario-box-login">
             <h2>Iniciar sesión</h2>
-            <form action="../PHP/login.php" method="post">
+            <form action="../PHP/login.php" method="post" id="formulario-login">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
                     <label>Email</label>
-                    <input type="email"  name="correo" autocomplete="off">
-
+                    <input type="email"  name="correo" id="correo-login" autocomplete="off">
+                    <p class="error" id="error-correo-login">Este campo no puede estar vacío</p>
                 </div>
                 <div class="input-box">
-                    <span class="material-symbols-outlined icon">
+                    <span class="material-symbols-outlined icon icono-candado">
                         lock
                     </span>
                     <label>Contraseña</label>
-                    <input type="password"  name="contrasenia" autocomplete="off">
-
+                    <input type="password"  name="contrasenia" id="contrasenia-login" autocomplete="off">
+                    <p class="error" id="error-contrasenia-login">Este campo no puede estar vacío</p>
                 </div>
                 <button type="submit" class="boton">Iniciar sesión</button>
                 <div class="pregunta-registro">
                     <p>¿Aún no tienes cuenta?<a href="#" class="registro-link">Registrate!</a></p>
                 </div>
             </form>
+            <div class="error-servidor" id="error-login"></div>
         </div>
 
         <!--------------------------------------REGISTRO---------------------------------------------->

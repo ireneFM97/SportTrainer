@@ -6,7 +6,7 @@ include "conexion.php";
     $contrasenia = $_POST["contrasenia"];
 
     if ($correo == "" || $contrasenia == "") {
-        header('Location: ../HTML/loginRegistro.html');
+        header('Location: ../HTML/loginRegistro.php');
     } else {
         $selectValidar = "SELECT * FROM usuarios WHERE email = '$correo' AND contrasenia = '$contrasenia'";
         $resultadoValidar = $pdo->query($selectValidar);
@@ -20,12 +20,16 @@ include "conexion.php";
             $nombreUsuario = $resultadoNombre->fetchColumn();
             $_SESSION['nombreUsuario'] = $nombreUsuario;
 
-            $selectApellido = "SELECT apellidos FROM usuarios WHERE email = '$correo'";
+            $selectApellidos = "SELECT apellidos FROM usuarios WHERE email = '$correo'";
             $resultadoApellidos = $pdo->query($selectApellidos);
             $apellidosUsuario = $resultadoApellidos->fetchColumn();
             $_SESSION['apellidosUsuario'] = $apellidosUsuario;
+
+            $respuestaLogin = array('success' => true, 'messageLogin' => '¡Inicio de sesión exitosa!');
+            echo json_encode($respuestaLogin);
             
         } else {
-            echo "Error";
+            $respuestaLogin = array('success' => false, 'messageLogin' => 'Email o contraseña incorrectos');
+            echo json_encode($respuestaLogin);
         }
     }

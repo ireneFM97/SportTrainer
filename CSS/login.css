@@ -168,5 +168,19 @@ body {
 }
 
 .error-servidor {
-    top: 530px
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-servidor p{
+    margin: 0px;   
+}
+
+.icono-candado {
+    cursor: pointer;
 }

@@ -1,7 +1,7 @@
 <?php 
 
     session_start();
-    if ($_SESSION['emailUsuario'] != null) {
+    if (!isset($_SESSION['emailUsuario'])) {
         echo "
         <script>
             alert('Debes iniciar sesion');
@@ -47,27 +47,20 @@
                     <a href="./contacto.php" class="nav-link">Contacto</a>
                 </div>
                 <div class="container-usuario">
-                    <div class="container-bienvenida">
-                        <p class="nombre-usuario">
-                            <?php
-                                echo $_SESSION['name'] . "!"; //para saber el nombre de usuario que está en esa sesión
-                            ?>
-                        </p>
-                    </div>
                     <span class="material-symbols-outlined icon-user" id="icono-opciones">account_circle</span>
                     <div class="container-opciones">
                         <div class="usuario-opciones">
                             <img class="img-usuario" src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
                                 alt="imagen de perfil del usuario">
                             <div>
-                                <h5>
+                                <h5 id="nombre-usuario">
                                     <?php
-                                        echo $_SESSION['name'] . " " . $_SESSION['surnames'];
+                                        echo $_SESSION['nombreUsuario'] . " " . $_SESSION['apellidosUsuario'];
                                     ?>
                                 </h5>
                                 <p>
                                     <?php
-                                        echo $_SESSION["userEmail"];
+                                        echo $_SESSION["emailUsuario"];
                                     ?>
                                 </p>
                             </div>
@@ -82,7 +75,7 @@
                             <a href="#" data-section="options" data-value="option2">Configuración</a>
                         </div>
 
-                        <a class="cerrar-sesion" href="php/close_session.php" data-section="options"
+                        <a class="cerrar-sesion" href="../PHP/cerrarSesion.php" data-section="options"
                             data-value="option3">Cerrar sesión</a>
                     </div>
                 </div>

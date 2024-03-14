@@ -1,7 +1,7 @@
 <?php 
 
     session_start();
-    if ($_SESSION['emailUsuario'] != null) {
+    if (!isset($_SESSION['emailUsuario'])) {
         echo "
         <script>
             alert('Debes iniciar sesion');
@@ -37,6 +37,12 @@
             <!--------------------HEADER NAVEGACIÓN------------------------------------->
             <nav>
                 <span class="material-symbols-outlined menu">menu</span>
+                <div class="opciones-menu">
+                    <a href="./home.php" class="nav-link activo">Inicio</a>
+                    <a href="./nosotros.php" class="nav-link">Nosotros</a>
+                    <a href="./servicios.php" class="nav-link">Servicios</a>
+                    <a href="./contacto.php" class="nav-link">Contacto</a>
+                </div>
                 <div class="logo">
                     <a href="./home.php"><img src="../assets/logo.PNG" alt="logotipo"></a>
                 </div>
@@ -47,28 +53,21 @@
                     <a href="./contacto.php" class="nav-link">Contacto</a>
                 </div>
                 <div class="container-usuario">
-                    <div class="container-bienvenida">
-                        <p class="nombre-usuario">
-                          <!--  <?php
-                                echo $_SESSION['name'] . "!"; //para saber el nombre de usuario que está en esa sesión
-                            ?>-->
-                        </p>
-                    </div>
                     <span class="material-symbols-outlined icon-user" id="icono-opciones">account_circle</span>
                     <div class="container-opciones">
                         <div class="usuario-opciones">
                             <img class="img-usuario" src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
                                 alt="imagen de perfil del usuario">
                             <div>
-                                <h5>
-                                <!--    <?php
-                                        echo $_SESSION['name'] . " " . $_SESSION['surnames'];
-                                    ?>-->
+                                <h5 id="nombre-usuario">
+                                    <?php
+                                        echo $_SESSION['nombreUsuario'] . " " . $_SESSION['apellidosUsuario'];
+                                    ?>
                                 </h5>
                                 <p>
-                                <!--    <?php
-                                        echo $_SESSION["userEmail"];
-                                    ?>-->
+                                    <?php
+                                        echo $_SESSION["emailUsuario"];
+                                    ?>
                                 </p>
                             </div>
 
@@ -82,7 +81,7 @@
                             <a href="#" data-section="options" data-value="option2">Configuración</a>
                         </div>
 
-                        <a class="cerrar-sesion" href="php/close_session.php" data-section="options"
+                        <a class="cerrar-sesion" href="../PHP/cerrarSesion.php" data-section="options"
                             data-value="option3">Cerrar sesión</a>
                     </div>
                 </div>
