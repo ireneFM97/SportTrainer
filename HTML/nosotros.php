@@ -37,6 +37,12 @@
             <!--------------------HEADER NAVEGACIÓN------------------------------------->
             <nav>
                 <span class="material-symbols-outlined menu">menu</span>
+                <div class="opciones-menu">
+                    <a href="./home.php" class="nav-link ">Inicio</a>
+                    <a href="./nosotros.php" class="nav-link activo">Nosotros</a>
+                    <a href="./servicios.php" class="nav-link">Servicios</a>
+                    <a href="./contacto.php" class="nav-link">Contacto</a>
+                </div>
                 <div class="logo">
                     <a href="./home.php"><img src="../assets/logo.PNG" alt="logotipo"></a>
                 </div>

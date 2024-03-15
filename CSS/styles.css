@@ -1124,10 +1124,6 @@ nav {
 
 @media screen and (max-width: 650px) {
 
-    main.hidden{
-        display: none;
-    }
-
     .material-symbols-outlined.menu {
         display: block;
         cursor: pointer;
@@ -1140,7 +1136,7 @@ nav {
         position: absolute;
         background-color: red;
         width: 100vW;
-        height: 100vh;
+        height: 42vh;
         justify-content: center;
         align-items: center;
         top: 58px;
@@ -1148,7 +1144,7 @@ nav {
     }
 
     .nav-link {
-        font-size: 60px;
+        font-size: 45px;
     }
 
     .barra {

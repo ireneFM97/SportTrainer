@@ -6,7 +6,7 @@ const formularioLogin = document.querySelector("#formulario-login");
 const patronEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const patronContrasenia = /^.{6,8}$/;
 const lockClosed = document.querySelector(".icono-candado");
-
+const contraseniaInput = document.getElementById("contrasenia-login");
 
 //Cambiar de formulario de Iniciar sesión a Registro y viceversa
 registroLink.addEventListener("click", () => {
@@ -22,9 +22,11 @@ loginLink.addEventListener("click", () => {
 
 lockClosed.addEventListener("click", () => {
     if (lockClosed.innerHTML == "lock") {
-        lockClosed.innerHTML = "lock_open";
+        lockClosed.innerHTML = "lock_open_right";
+        contraseniaInput.type = "text";
     } else {
         lockClosed.innerHTML = "lock";
+        contraseniaInput.type = "password";
     }
 
 });
