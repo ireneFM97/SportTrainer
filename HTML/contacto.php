@@ -114,7 +114,7 @@
 
                     <div class="container-formulario">
                         <p class="titulo">¿Tienes alguna duda?</p>
-                        <form class="fomulario" method="post" action="../assets/APIsms/sms.php">
+                        <form class="fomulario" method="post" action="enviar.php">
                             <div class="grupo-input">
                                 <label for="email">Correo Electrónico</label>
                                 <input type="email" name="email" id="email" placeholder="Ej: ejemplo@ejemplo.es">
