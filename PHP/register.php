@@ -13,7 +13,7 @@
     $emailDB = $resultadoEmail->fetchColumn();
 
     if ($nombre == "" || $apellidos == "" || $usuario == "" || $correo == "" || $contrasenia == "") {
-        header('Location: ../HTML/loginRegistro.html');
+        header('Location: ../Vistas/loginRegistro.php');
     } else if ($correo == $emailDB) {
             $respuestaRegistro = array('success' => false, 'message' => 'Este email ya existe. Inicia sesion');
             echo json_encode($respuestaRegistro);

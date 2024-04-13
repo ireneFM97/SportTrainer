@@ -1,9 +1,8 @@
 <?php
 
-$correo = $_POST["correo"];
+$correo = $_POST["email"];
 
-$mensaje = "Línea 1\r\nLínea 2\r\nLínea 3";
-
-
-// Enviarlo
+$mensaje = "Hola";
 mail($correo, 'Mi título', $mensaje);
+echo $correo;
+// Enviarlo

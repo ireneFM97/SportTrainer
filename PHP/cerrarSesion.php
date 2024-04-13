@@ -2,4 +2,4 @@
 
 session_start();
 session_destroy();
-header('Location: ../HTML/loginRegistro.php');
+header('Location: ../Vistas/loginRegistro.php');

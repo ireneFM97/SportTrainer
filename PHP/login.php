@@ -6,7 +6,7 @@ include "conexion.php";
     $contrasenia = $_POST["contrasenia"];
 
     if ($correo == "" || $contrasenia == "") {
-        header('Location: ../HTML/loginRegistro.php');
+        header('Location: ../Vistas/loginRegistro.php');
     } else {
         $selectValidar = "SELECT * FROM usuarios WHERE email = '$correo' AND contrasenia = '$contrasenia'";
         $resultadoValidar = $pdo->query($selectValidar);

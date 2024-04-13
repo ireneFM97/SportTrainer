@@ -53,7 +53,9 @@ nav {
     padding: 0 80px;
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
+
 
 .material-symbols-outlined.menu {
     display: none;

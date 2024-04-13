@@ -4,11 +4,12 @@ const registroLink = document.querySelector(".registro-link");
 const formularioRegistro = document.querySelector("#formulario-registro");
 const formularioLogin = document.querySelector("#formulario-login");
 const patronEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const patronContrasenia = /^.{6,8}$/;
-const lockClosed = document.querySelector(".icono-candado");
+const patronContrasenia = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+const lockClosed = document.getElementById("candado-icon");
 const contraseniaInput = document.getElementById("contrasenia-login");
 
 //Cambiar de formulario de Iniciar sesión a Registro y viceversa
+
 registroLink.addEventListener("click", () => {
     recuadroLogin.classList.add("active");
 });
@@ -21,11 +22,11 @@ loginLink.addEventListener("click", () => {
 //Mostrar y ocultar constraseña
 
 lockClosed.addEventListener("click", () => {
-    if (lockClosed.innerHTML == "lock") {
-        lockClosed.innerHTML = "lock_open_right";
+    if (lockClosed.innerText == "lock") {
+        lockClosed.innerText = "lock_open_right";
         contraseniaInput.type = "text";
     } else {
-        lockClosed.innerHTML = "lock";
+        lockClosed.innerText = "lock";
         contraseniaInput.type = "password";
     }
 
@@ -198,7 +199,7 @@ formularioLogin.addEventListener("submit", (event) => {
                     <p>${data.messageLogin}</p>
                 `
             } else {
-                location.href = '../HTML/home.php';
+                location.href = '../Vistas/home.php';
             }
         });
     }
