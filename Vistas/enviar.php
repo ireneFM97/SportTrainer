@@ -31,7 +31,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';               // Para decirle que estamos usando un gmail                
     $mail->SMTPAuth   = true;                                    
     $mail->Username   = 'practicaswebccc@gmail.com';    // Pones tu clave y usuario               
-    $mail->Password   = 'Hannamontana123';                               
+    $mail->Password   = '44';                               
     $mail->SMTPSecure = 'ssl';            
     $mail->Port       = 587;                            // Puerto que tiene gmail    
 
