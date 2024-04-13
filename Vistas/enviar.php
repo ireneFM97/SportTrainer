@@ -1,6 +1,7 @@
-<?php
 
-$email = $_POST['email'];
+ <?php
+
+/*$email = $_POST['email'];
 
 // Datos para el correo
 $destinatario = "sportrainer@outlook.es";
@@ -8,15 +9,16 @@ $asunto = "¡Te confirmamos que hemos recibido tu correo!";
 $mensaje = "En breve nuestro equipo se pondrá en contacto contigo lo antes posible! <br> ¡Muchas gracias por tu paciencia!";
 
 // Enviando Mensaje
-mail($destinatario, $asunto, $mensaje);
-/*
+mail($destinatario, $asunto, $mensaje); 
+*/
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Llamada a la librería
-require '../assets/APIemail/PHPMailer-master/src/Exception.php';
-require '../assets/APIemail/PHPMailer-master/src/PHPMailer.php';
-require '../assets/APIemail/PHPMailer-master/src/SMTP.php';
+require '../assets/PHPMailer/src/Exception.php';
+require '../assets/PHPMailer/src/PHPMailer.php';
+require '../assets/PHPMailer/src/SMTP.php';
 
 // Enviamos el correo
 $mail = new PHPMailer(true);
@@ -26,16 +28,16 @@ try {
     $mailTo = $_POST['email']; // Obtener la dirección de correo electrónico del formulario
     $mail->SMTPDebug = 0;                      
     $mail->isSMTP();                                    // Para usar el SMTP                       
-    $mail->Host       = 'smtp.office365.com';               // Para decirle que estamos usando un gmail                
+    $mail->Host       = 'smtp.gmail.com';               // Para decirle que estamos usando un gmail                
     $mail->SMTPAuth   = true;                                    
-    $mail->Username   = 'sportrainer@outlook.es';    // Pones tu clave y usuario               
-    $mail->Password   = 'Damefifa.1234';                               
-    $mail->SMTPSecure = 'STARTTLS';            
+    $mail->Username   = 'practicaswebccc@gmail.com';    // Pones tu clave y usuario               
+    $mail->Password   = 'Hannamontana123';                               
+    $mail->SMTPSecure = 'ssl';            
     $mail->Port       = 587;                            // Puerto que tiene gmail    
 
     // Remitente y destinatario
-    $mail->setFrom('sportrainer@outlook.es', 'Atención al cliente'); // Poner el correo y el usuario
-    $mail->addAddress($mailTo);                            // Email donde se envía la información
+    $mail->setFrom('practicaswebccc@gmail.com', 'Atención al cliente'); // Poner el correo y el usuario
+    $mail->addAddress($mailTo, 'irene');                            // Email donde se envía la información
 
     // Contenido
     $mail->isHTML(true);                                  // Lo envía en formato HTML
@@ -49,4 +51,3 @@ try {
     echo "No se ha podido enviar: {$mail->ErrorInfo}";
 }
 ?>
-*/
