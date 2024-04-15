@@ -96,7 +96,7 @@
         </header>
         <!-----------------------FIN  HEADER------------------------------------------------------------------------->
         <!---------------------------INICIO CONTENIDO------------------------------------------->
-        <main>
+        <main class="main">
             <section class="seccion-eslogan">
                 <div class="box-letras">
                     <p class="titulo-eslogan">Descubre la libertad en cada zancada y desafía tus límites</p>
@@ -147,7 +147,7 @@
         </main>
         <!----------------------------------------------------FIN DEL CONTENIDO------------------------------------------------>
         <!------------------------------------------------INICIO DEL FOOTER----------------------------------------------------->
-        <footer>
+        <footer class="footer">
             <section class="seccion-footer">
                 <div class="logo-izquierda">
                     <img src="../assets/logo.png" alt="logotipo">
