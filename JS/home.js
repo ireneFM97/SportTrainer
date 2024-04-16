@@ -5,6 +5,8 @@ const opcionesMenu = document.querySelector(".opciones-menu");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const container = document.querySelector(".container");
+const nContainer = document.querySelector(".n-container");
+const sContainer = document.querySelector(".s-container");
 const header = document.querySelector("header");
 
 iconoOpciones.addEventListener("click", () =>{
@@ -17,12 +19,16 @@ iconoOpciones.addEventListener("click", () =>{
       });
 });
 
+
+
 iconoMenu.addEventListener("click", () => {
   opcionesMenu.classList.toggle("shown");
   main.classList.toggle("hidden");
   footer.classList.toggle("hidden");
   container.classList.toggle("hidden");
   header.classList.toggle("hidden");
+  nContainer.classList.toggle("hidden");
+  sContainer.classList.toggle("hidden");
 
   if (iconoMenu.innerHTML == "menu") {
     iconoMenu.innerHTML = "close";

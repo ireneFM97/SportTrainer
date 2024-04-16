@@ -1135,7 +1135,33 @@ nav {
         display: none;
     }
 
-    .container footer.hidden {
+    .n-container {
+        grid-template-rows: 250px 2600px 150px;
+    }
+
+    .n-container.hidden {
+        grid-template-rows: 250px 10px 150px;
+  
+    }
+
+    .n-main.hidden {
+        display: none;
+    }
+
+    .n-footer.hidden {
+        display: none;
+    }
+
+
+    .s-container.hidden {
+        grid-template-rows: 250px 10px 150px;
+        background-color: red;
+    }
+    .s-container main.hidden {
+        display: none;
+    }
+
+    .s-footer.hidden {
         display: none;
     }
 
@@ -1150,7 +1176,7 @@ nav {
         gap: 40px;
         position: absolute;
         background-color: rgb(0, 0, 0);
-        width: 100vW;
+        width: 110%;
         height: 100vh;
         padding-top: 100px;
         align-items: center;
@@ -1189,10 +1215,6 @@ nav {
 
     .seccion-tarjetas p {
         font-size: 15px;
-    }
-
-    .n-container {
-        grid-template-rows: 250px 2600px 150px;
     }
 
     .n-seccion-tarjetas {
