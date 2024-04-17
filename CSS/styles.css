@@ -1152,7 +1152,6 @@ nav {
         display: none;
     }
 
-
     .s-container.hidden {
         grid-template-rows: 250px 10px 150px;
         background-color: red;
@@ -1162,6 +1161,19 @@ nav {
     }
 
     .s-footer.hidden {
+        display: none;
+    }
+
+    .c-container.hidden {
+        grid-template-rows: 250px 10px 150px;
+  
+    }
+
+    .c-main.hidden {
+        display: none;
+    }
+
+    .c-footer.hidden {
         display: none;
     }
 
@@ -1176,7 +1188,7 @@ nav {
         gap: 40px;
         position: absolute;
         background-color: rgb(0, 0, 0);
-        width: 110%;
+        width: 102%;
         height: 100vh;
         padding-top: 100px;
         align-items: center;

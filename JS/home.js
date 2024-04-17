@@ -7,6 +7,7 @@ const footer = document.querySelector("footer");
 const container = document.querySelector(".container");
 const nContainer = document.querySelector(".n-container");
 const sContainer = document.querySelector(".s-container");
+const cContainer = document.querySelector(".c-container");
 const header = document.querySelector("header");
 
 iconoOpciones.addEventListener("click", () =>{
@@ -23,13 +24,18 @@ iconoOpciones.addEventListener("click", () =>{
 
 iconoMenu.addEventListener("click", () => {
   opcionesMenu.classList.toggle("shown");
+  if(location.href == "http://localhost/Pruebas/Proyecto/Vistas/nosotros.php"){
+      nContainer.classList.toggle("hidden");
+  }else if(location.href == "http://localhost/Pruebas/Proyecto/Vistas/home.php"){
+    container.classList.toggle("hidden");
+  }else if(location.href == "http://localhost/Pruebas/Proyecto/Vistas/servicios.php"){
+    sContainer.classList.toggle("hidden");
+  }else if(location.href == "http://localhost/Pruebas/Proyecto/Vistas/contacto.php"){
+    cContainer.classList.toggle("hidden");
+  }
   main.classList.toggle("hidden");
   footer.classList.toggle("hidden");
-  container.classList.toggle("hidden");
   header.classList.toggle("hidden");
-  nContainer.classList.toggle("hidden");
-  sContainer.classList.toggle("hidden");
-
   if (iconoMenu.innerHTML == "menu") {
     iconoMenu.innerHTML = "close";
   } else {
