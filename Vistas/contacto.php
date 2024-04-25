@@ -125,7 +125,7 @@
                         <form class="fomulario" method="post" action="../PHP/email.php">
                             <div class="grupo-input">
                                 <label for="email">Correo Electrónico</label>
-                                <input type="email" name="email" id="email" placeholder="Ej: ejemplo@ejemplo.es">
+                                <input type="email" name="email" id="emailCorreo" placeholder="Ej: ejemplo@ejemplo.es">
                             </div>
                             <div class="grupo-input">
                                 <textarea name="consulta" id="consulta" class="input-textarea" cols="30" rows="5" placeholder="Escribe tu consulta aquí"></textarea>

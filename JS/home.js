@@ -10,7 +10,8 @@ const sContainer = document.querySelector(".s-container");
 const cContainer = document.querySelector(".c-container");
 const header = document.querySelector("header");
 const botonCorreo = document.querySelector(".boton");
-const email = document.querySelector(".email");
+const email = document.querySelector("#emailCorreo").value;
+const formCorreo = document.querySelector(".fomulario");
 
 iconoOpciones.addEventListener("click", () => {
   opciones.classList.toggle("shown");
@@ -47,8 +48,9 @@ iconoMenu.addEventListener("click", () => {
 });
 
 /*
-botonCorreo.addEventListener("click", () => {
-  if (email.value == "") {
+
+formCorreo.addEventListener("submit", (event) => {
+  if(email == ""){
     Swal.fire({
       icon: 'error',
       title: '¡Vacio!',
@@ -56,7 +58,7 @@ botonCorreo.addEventListener("click", () => {
       showConfirmButton: false,
       timer: 50000
     });
-  } else {
+  }else{
     Swal.fire({
       icon: 'success',
       title: '¡Mensaje Enviado!',
@@ -65,17 +67,21 @@ botonCorreo.addEventListener("click", () => {
       timer: 50000
     });
   }
+    
+  event.preventDefault();
 });
 */
 
-botonCorreo.addEventListener("click", () => {
+formCorreo.addEventListener("submit", (event) => {
 
     Swal.fire({
       icon: 'success',
       title: '¡Mensaje Enviado!',
       text: 'Tu mensaje se ha enviado correctamente.',
       showConfirmButton: false,
-      timer: 50000 
+      timer: 50000
     });
   
+  event.preventDefault();
 });
+ 
