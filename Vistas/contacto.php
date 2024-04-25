@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -121,7 +122,7 @@
 
                     <div class="container-formulario">
                         <p class="titulo">¿Tienes alguna duda?</p>
-                        <form class="fomulario" method="post" action="enviar.php">
+                        <form class="fomulario" method="post" action="../PHP/email.php">
                             <div class="grupo-input">
                                 <label for="email">Correo Electrónico</label>
                                 <input type="email" name="email" id="email" placeholder="Ej: ejemplo@ejemplo.es">
@@ -148,5 +149,6 @@
 </body>
 
 <script src="../JS/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </html>

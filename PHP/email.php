@@ -1,16 +1,8 @@
 
  <?php
 
-/*$email = $_POST['email'];
-
-// Datos para el correo
-$destinatario = "sportrainer@outlook.es";
-$asunto = "¡Te confirmamos que hemos recibido tu correo!";
-$mensaje = "En breve nuestro equipo se pondrá en contacto contigo lo antes posible! <br> ¡Muchas gracias por tu paciencia!";
-
-// Enviando Mensaje
-mail($destinatario, $asunto, $mensaje); 
-*/
+/*Implementación anterior (Ahora habría que contratar un plan de servidor SMTP
+como por ejemplo SendGrid)*/
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -30,13 +22,12 @@ try {
     $mail->isSMTP();                                    // Para usar el SMTP                       
     $mail->Host       = 'smtp.gmail.com';               // Para decirle que estamos usando un gmail                
     $mail->SMTPAuth   = true;                                    
-    $mail->Username   = 'practicaswebccc@gmail.com';    // Pones tu clave y usuario               
+    $mail->Username   = 'irenemeneses97@gmail.com';    // Pones tu clave y usuario               
     $mail->Password   = '44';                               
-    $mail->SMTPSecure = 'ssl';            
-    $mail->Port       = 587;                            // Puerto que tiene gmail    
+    $mail->SMTPSecure = 'ssl';                             // Puerto que tiene gmail    
 
     // Remitente y destinatario
-    $mail->setFrom('practicaswebccc@gmail.com', 'Atención al cliente'); // Poner el correo y el usuario
+    $mail->setFrom('irenemeneses97@gmail.com', 'Atención al cliente'); // Poner el correo y el usuario
     $mail->addAddress($mailTo, 'irene');                            // Email donde se envía la información
 
     // Contenido
@@ -46,8 +37,9 @@ try {
     $mail->Body    = 'En breve nuestro equipo se pondrá en contacto contigo lo antes posible! <br> ¡Muchas gracias por tu paciencia!'; // El cuerpo del correo
 
     $mail->send();
-    echo 'El mensaje se envió correctamente';
+
 } catch (Exception $e) {
-    echo "No se ha podido enviar: {$mail->ErrorInfo}";
+    header('Location: ../Vistas/contacto.php');
 }
+
 ?>
