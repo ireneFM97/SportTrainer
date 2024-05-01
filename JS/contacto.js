@@ -8,7 +8,7 @@ formCorreo.addEventListener("submit", (event) => {
   if(email == ""){
     Swal.fire({
       icon: 'error',
-      title: '¡Vacio!',
+      title: '¡Vacío!',
       text: 'No puedes dejar el correo vacío',
       showConfirmButton: false,
       timer: 50000
