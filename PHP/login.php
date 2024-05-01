@@ -33,3 +33,5 @@ include "conexion.php";
             echo json_encode($respuestaLogin);
         }
     }
+
+    $pdo = null;

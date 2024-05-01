@@ -1,5 +1,3 @@
-/*#9ecbff*/
-
 html {
     box-sizing: border-box;
 }
@@ -390,8 +388,8 @@ nav {
     margin-left: 15px;
 }
 
-/*********FIN Inicio*************************/
-/*********Nosotros**************************/
+/****FIN Inicio********/
+/****Nosotros*********/
 
 .n-container {
     display: grid;
@@ -488,7 +486,7 @@ nav {
     border-radius: 10px;
 }
 
-/*********************FOOTER NOSOTROS***************************/
+/********FOOTER NOSOTROS**********/
 
 .n-footer {
     background: rgb(178, 175, 175);
@@ -498,8 +496,8 @@ nav {
     align-items: center;
 }
 
-/***********************FIN Nosotros**************************/
-/*****************Contacto***********************************/
+/********FIN Nosotros*********/
+/******Contacto************/
 .c-container {
     display: grid;
     min-height: 100vh;
@@ -682,8 +680,8 @@ nav {
     font-size: 25px;
 }
 
-/***************FIN contacto*******************************/
-/*****************Servicios********************************/
+/******FIN contacto**********/
+/******Servicios***********/
 .s-container {
     display: grid;
     min-height: 100vh;
@@ -790,7 +788,7 @@ nav {
 }
 
 
-/**********************************************************/
+/********************/
 
 @media screen and (max-width: 1300px) {
     .seccion-tarjetas {
@@ -1154,7 +1152,6 @@ nav {
 
     .s-container.hidden {
         grid-template-rows: 250px 10px 150px;
-        background-color: red;
     }
     .s-container main.hidden {
         display: none;
